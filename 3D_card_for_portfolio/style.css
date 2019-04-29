@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background-color: #3d385a;
+}
+
+.container {
+    width: 680px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.card {
+    width: 200px;
+    margin: 10px;
+}
