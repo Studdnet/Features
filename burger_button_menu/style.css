@@ -17,6 +17,7 @@ body {
     height: 50px;
     background-color: #fff;
     border-radius: 50%;
+    position: relative;
 }
 
 .menu-btn span,
@@ -34,7 +35,7 @@ body {
 
 .menu-btn span::before, 
 .menu-btn span::after {
-    content: "";
+    content: '';
     display: block;
     transition: 0.2s;
 }
@@ -47,14 +48,54 @@ body {
     transform: translateY(5px);
 }
 
-.menu-btn_active span::before {
+.menu-btn_active span:before {
     transform: rotate(-35deg);
     width: 10px;
     transform-origin: left bottom;
 }
 
-.menu-btn_active span::after {
+.menu-btn_active span:after {
     transform: rotate(35deg);
     width: 10px;
     transform-origin: left top;
+}
+
+.menu-block {
+position: relative;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+border-top-right-radius: 50px;
+border-bottom-right-radius: 50px;
+}
+
+.menu-nav {
+    background-color: #fff;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 40px;
+    margin-right: -25px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px; 
+}
+
+.menu-nav_link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    margin-right: 20px;
+}
+
+.menu-nav {
+    transition: 0.2s;
+    transform-origin: right center;
+    transform: translateX(0%);
+    opacity: 0;
+}
+
+.menu-nav_active {
+    transform: translateX(0%);
+    opacity: 1;
 }
